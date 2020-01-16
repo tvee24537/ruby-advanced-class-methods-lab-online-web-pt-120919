@@ -34,13 +34,13 @@ class Song  #given
     result
   end
   
-  def self.find_or_create_by_name(title)
-    #either return a matching song instance with that name or create a new song with the name and return the song instance
-    result = self.find_by_name(title)
+  def self.find_or_create_by_name(name)
+    #This method will accept a string name for a song and either return a matching song instance with that name or create a new song with the name and return the song instance.
+    result = self.find_by_name(name)
     if result
       result
     else
-      self.create_by_name(title)
+      self.create_by_name(name)
     end
   end
   
